@@ -6,7 +6,7 @@ children:React.ReactNode;
 
 const Container = ({children}:IContainer) => {
   return (
-    <div className='container mx-auto'>
+    <div className='max-w-[1400px] mx-auto'>
         {children}
     </div>
   )

@@ -2,16 +2,18 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import Store from "./Pages/Store/Store";
-import Navbar from "./Components/Navbar/Navbar";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
   return (
     <div className="">
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/store" element={<Store />} />
-      </Routes>
+      
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
