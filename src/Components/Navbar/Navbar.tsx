@@ -7,9 +7,9 @@ import Container from "../Container/Container";
 const Navbar = () => {
   const [menuMobile, setMenuMobile] = useState(false);
   return (
-    <Container>
+    
       <div
-        className="w-full h-[100px] bg-[#2b2b2b] text-white flex justify-around items-center relative"
+        className="w-full h-[100px] bg-[#2b2b2b] text-white flex justify-around items-center relative "
         dir="rtl"
       >
         {menuMobile ? (
@@ -43,7 +43,7 @@ const Navbar = () => {
               <Link className="py-[40px]" to="/store">
                 فروشگاه
                 <div
-                  className={`transition-all ease-linear absolute top-[95%] right-0 max-w-[1400px] w-screen opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:top-[100%]  group-hover:right-0`}
+                  className={`transition-all ease-linear absolute top-[95%] right-0 max-w-[1400px] w-full opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:top-[100%]  group-hover:right-0`}
                 >
                   <ul className="flex flex-col justify-center items-start gap-y-5 text-white bg-[#333333] pr-[20%] pb-[20px]">
                     <li>
@@ -81,7 +81,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </Container>
+    
   );
 };
 

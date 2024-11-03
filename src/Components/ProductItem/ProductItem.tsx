@@ -1,7 +1,7 @@
 import samsung1 from "../../assets/product/samsung-mobile.png";
 const ProductItem = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-y-5 lg:w-[25%] sm:w-[45%] w-[80%] border-[1px] border-[#cfcfcf] pb-[40px] rounded-[20px] pt-[10px] mt-[20px]">
+    <div className="flex flex-col justify-center items-center gap-y-5 border-[1px] border-[#cfcfcf] pb-[40px] rounded-[20px] pt-[10px] mt-[20px]">
       <div>
         <img src={samsung1} alt="" />
       </div>
