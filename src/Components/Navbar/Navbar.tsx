@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-import Container from "../Container/Container";
 
 const Navbar = () => {
   const [menuMobile, setMenuMobile] = useState(false);
@@ -40,7 +39,7 @@ const Navbar = () => {
               <Link to="/">خانه</Link>
             </li>
             <li className=" group ">
-              <Link className="py-[40px]" to="/store">
+              <Link className="pb-[40px]" to="/store">
                 فروشگاه
                 <div
                   className={`transition-all ease-linear absolute top-[95%] right-0 max-w-[1400px] w-full opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:top-[100%]  group-hover:right-0`}
@@ -77,7 +76,7 @@ const Navbar = () => {
             </h1>
           </div>
           <div className="border-b-2 pb-2 shadow-lg">
-            <button>سبد خرید</button>
+            <Link to="/cart">سبد خرید</Link>
           </div>
         </div>
       </div>

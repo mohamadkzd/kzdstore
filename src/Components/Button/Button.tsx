@@ -3,7 +3,7 @@ import { ComponentProps } from "react";
 type TVariant = "primary" | "success" | "danger" | "secondary" | "warning";
 
 type TButton = ComponentProps<"button"> & {
-  variant: TVariant;
+  variant?: TVariant;
 };
 const Button = ({ children, variant,style, ...rest }: TButton) => {
   console.log(checkVariant(variant));
@@ -11,7 +11,7 @@ const Button = ({ children, variant,style, ...rest }: TButton) => {
   return <button {...rest} style={{borderRadius:"10px",padding:"5px 10px",...style,...checkVariant(variant)}}>{children}</button>;
 };
 
-function checkVariant(variant: TVariant) {
+function checkVariant(variant?: TVariant) {
   if (variant === "primary") {
     return { backgroundColor: "blue", color: "white" };
   } else if (variant === "secondary") {

@@ -26,11 +26,11 @@ const ProductDetail = () => {
         <div>
           <button className="text-4xl text-red-600 ">+</button>
         </div>
-        <Button variant="danger" className="text-2xl">خرید محصول</Button>
+        <Button variant="danger" className="text-2xl">
+          خرید محصول
+        </Button>
         <div>
-          <button className="text-4xl text-red-600 ">
-            -
-          </button>
+          <button className="text-4xl text-red-600 ">-</button>
         </div>
       </div>
     </div>
