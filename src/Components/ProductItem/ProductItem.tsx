@@ -1,16 +1,25 @@
 import samsung1 from "../../assets/product/samsung-mobile.png";
-const ProductItem = () => {
+import { Products } from "../../Types/Server";
+
+type TProductItem = Products
+
+const ProductItem = ({image,title,description,category}:TProductItem) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-y-5 border-[1px] border-[#cfcfcf] pb-[40px] rounded-[20px] pt-[10px] mt-[20px]">
-      <div>
-        <img src={samsung1} alt="" />
+    <div className="flex flex-col justify-center items-center gap-y-5 border-[1px] border-[#cfcfcf] pb-[40px] rounded-[20px] pt-[10px] mt-[20px] px-4">
+      <div className="flex justify-center">
+        <img className="w-[50%] object-cover text-center" src={image} alt="" />
       </div>
       <div>
-        <h2 className="text-xl">عنوان محصول</h2>
+        <h2 className="text-lg">{title}</h2>
+      </div>
+      <div>
+        <p className="text-gray-500 px-3 text-sm">
+       {description}
+        </p>
       </div>
       <div>
         <p className="text-gray-500 px-3">
-        گوشی موبایل سامسونگ مدل Galaxy A55 دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - ویتنام
+          {category}
         </p>
       </div>
       <div>

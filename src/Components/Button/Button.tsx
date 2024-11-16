@@ -6,7 +6,7 @@ type TButton = ComponentProps<"button"> & {
   variant?: TVariant;
 };
 const Button = ({ children, variant,style, ...rest }: TButton) => {
-  console.log(checkVariant(variant));
+  // console.log(checkVariant(variant));
 
   return <button {...rest} style={{borderRadius:"10px",padding:"5px 10px",...style,...checkVariant(variant)}}>{children}</button>;
 };
@@ -18,7 +18,7 @@ function checkVariant(variant?: TVariant) {
     return { backgroundColor: "gray", color: "black" };
   }
    else if (variant === "danger") {
-    return { backgroundColor: "red", color: "white" };
+    return { backgroundColor: "#ef4056", color: "white" };
   }
    else if (variant === "success") {
     return { backgroundColor: "green", color: "white" };
