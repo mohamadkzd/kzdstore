@@ -26,13 +26,14 @@ export function ShoppingCartProvider({ children }: ShoppingCartProvider) {
 
   
   const handleIncreseProductQty = (id: number) => {
-    setCartItems((currentItems) => {
-      let selectedItem = currentItems.find((item) => item.id == id);
+    setCartItems((prevItems) => {
+      let selectedItem = prevItems.find((item) => item.id == id); //با فایند کردن آیتمی که میخواهیم که بگیم آیدی محصولی که کلیک شد با آیدی محصولی که هست یکی باشه حالا اگر فایند نکنه خالی بر میگردونه 
 
       if (selectedItem == null) {
-        return [...currentItems, { id: id, qty: 1 }];
-      } else {
-        return currentItems.map((item) => {
+        return [...prevItems, { id: id, qty: 1 }];
+      } 
+      else {
+        return prevItems.map((item) => {
           if (item.id == id) {
             return { ...item, qty: item.qty + 1 };
           } else {
@@ -42,6 +43,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProvider) {
       }
     });
   };
+    
+  // const handelDecreaseProductQty=(id:number)=>{
+  //  setCartItems((prevItems)=>{
+      
+  //  })
+  // }
 
   return (
     <ShoppingCartContext.Provider value={{ cartItems ,handleIncreseProductQty}}>
