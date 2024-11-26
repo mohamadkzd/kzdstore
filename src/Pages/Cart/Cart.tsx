@@ -4,15 +4,14 @@ import { ShoppingCartContext, useShoppingCartContext } from "../../Context/Shopp
 
 const Cart = () => {
   
- 
+ const {cartItems}=useShoppingCartContext()
 
   return (
     <div className="max-w-[1000px] mx-auto ">
       <div className="flex justify-center items-start gap-y-5 flex-col flex-wrap  ">
-        <CartItem />
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        {cartItems.map((item)=>(
+          <CartItem {...item} />
+        ))}
       </div>
       <div className="mt-[10px]">
         <p>قیمت کل : 1,000</p>
